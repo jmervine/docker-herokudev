@@ -8,7 +8,7 @@ run \
     apt-get install -y \
         vim \
         libffi-dev \
-        sqlite3 && \
+        libsqlite3-dev && \
     apt-get autoremove -y && \
     apt-get clean all && \
     apt-get purge -y && \
