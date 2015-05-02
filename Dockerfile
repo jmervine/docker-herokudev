@@ -7,6 +7,7 @@ run \
     apt-get update && \
     apt-get install -y \
         vim \
+        libcurl3-dev \
         libffi-dev \
         libsqlite3-dev && \
     apt-get autoremove -y && \

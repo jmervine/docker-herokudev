@@ -13,11 +13,15 @@ push:
 rebuild:
 	# build everything in order, go take a nap
 	make build
+	cd ruby1.9.3; make build
 	cd ruby2.2.1; make build
+	cd rails3.2; make build
 	cd rails4.2; make build
 
 repush:
 	# push everything in order, run to the store, you've got time
 	make push
+	cd ruby1.9.3; make push
 	cd ruby2.2.1; make push
+	cd rails3.2; make push
 	cd rails4.2; make push
