@@ -1,6 +1,7 @@
 from heroku/cedar:14
 
 env PHANTOMJS_VERSION 1.9.8
+env NODE_VERSION 0.12.2
 
 # build / dev deps not included in cedar:14
 run \
@@ -26,11 +27,18 @@ run \
     mv /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/ /srv/var/phantomjs && \
     ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
 
+# install node binary
+# note: including node as a js runtime for ruby applications
+run \
+  curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz | \
+  gunzip -c | tar -xf - -C /
+
 # install heroku toolbelt
 run \
     wget -qO- https://toolbelt.heroku.com/install.sh | \
-      sed 's@sudo -k@#sudo -k@g' | sed 's@sudo sh@sh@g' | sh && \
-    echo 'PATH="/usr/local/heroku/bin:$PATH"' >> /root/.bashrc
+      sed 's@sudo -k@#sudo -k@g' | sed 's@sudo sh@sh@g' | sh
+
+env PATH /user/local/heroku/bin:/node-v${NODE_VERSION}-linux-x64/bin:$PATH
 
 run mkdir /src
 workdir /src

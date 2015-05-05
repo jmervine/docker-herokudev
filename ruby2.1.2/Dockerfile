@@ -1,7 +1,7 @@
 from jmervine/herokudev:latest
 
-env RUBY_MAJOR 2.2
-env RUBY_VERSION ${RUBY_MAJOR}.1
+env RUBY_MAJOR 2.1
+env RUBY_VERSION ${RUBY_MAJOR}.2
 
 # install ruby
 workdir /tmp
