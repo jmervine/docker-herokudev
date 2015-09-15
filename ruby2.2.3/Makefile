@@ -3,6 +3,9 @@ version=2.2.2
 
 build:
 	docker build -t $(image):$(version) .
+	docker tag -f $(image):$(version) \
+		$(image):latest
 
 push:
 	docker push $(image):$(version)
+	docker push $(image):latest
