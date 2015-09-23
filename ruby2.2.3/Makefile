@@ -1,5 +1,5 @@
 image=jmervine/herokudev-ruby
-version=2.2.2
+version=2.2.3
 
 build:
 	docker build -t $(image):$(version) .

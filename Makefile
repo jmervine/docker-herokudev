@@ -1,6 +1,6 @@
 image=jmervine/herokudev
 version=cedar14
-node_version=0.12.2
+node_version=4.1.0
 
 build:
 	docker build -t $(image):$(version) .
@@ -23,6 +23,8 @@ rebuild:
 	cd ruby1.9.3; make build
 	cd ruby2.2.1; make build
 	cd ruby2.1.2; make build
+	cd ruby2.2.2; make build
+	cd ruby2.2.3; make build
 	cd rails3.2; make build
 	cd rails4.2; make build
 
@@ -32,5 +34,7 @@ repush:
 	cd ruby1.9.3; make push
 	cd ruby2.2.1; make push
 	cd ruby2.1.2; make push
+	cd ruby2.2.2; make push
+	cd ruby2.2.3; make push
 	cd rails3.2; make push
 	cd rails4.2; make push
