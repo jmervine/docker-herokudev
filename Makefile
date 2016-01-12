@@ -1,6 +1,6 @@
 image=jmervine/herokudev
 version=cedar14
-node_version=4.1.0
+node_version=4.2.2
 
 build:
 	docker build -t $(image):$(version) .
