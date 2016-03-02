@@ -17,24 +17,33 @@ push:
 	docker push $(image)-node:latest
 	docker push $(image)-node:$(node_version)
 
-rebuild:
-	# build everything in order, go take a nap
-	make build
+rebuild/ruby:
 	cd ruby1.9.3; make build
 	cd ruby2.2.1; make build
 	cd ruby2.1.2; make build
 	cd ruby2.2.2; make build
 	cd ruby2.2.3; make build
-	cd rails3.2; make build
-	cd rails4.2; make build
+	cd ruby2.2.4; make build
+	cd ruby2.3.0; make build
 
-repush:
-	# push everything in order, run to the store, you've got time
-	make push
+rebuild:
+	# build everything in order, go take a nap
+	make build
+	make rebuild/main
+	make rebuild/ruby
+
+repush/ruby:
 	cd ruby1.9.3; make push
 	cd ruby2.2.1; make push
 	cd ruby2.1.2; make push
 	cd ruby2.2.2; make push
 	cd ruby2.2.3; make push
+	cd ruby2.2.4; make push
+	cd ruby2.3.0; make push
 	cd rails3.2; make push
 	cd rails4.2; make push
+
+repush:
+	# push everything in order, run to the store, you've got time
+	make push
+
