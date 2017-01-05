@@ -1,15 +1,13 @@
 image=jmervine/herokudev
 version=cedar14
-node_version=4.2.2
+node_version=6.9.3
 
 build:
+	-docker rmi $(image):latest $(image)-node:latest $(image)-node:$(node_version)
 	docker build -t $(image):$(version) .
-	docker tag -f $(image):$(version) \
-		$(image):latest
-	docker tag -f $(image):$(version) \
-		$(image)-node:latest
-	docker tag -f $(image):$(version) \
-		$(image)-node:$(node_version)
+	docker tag $(image):$(version) $(image):latest
+	docker tag $(image):$(version) $(image)-node:latest
+	docker tag $(image):$(version) $(image)-node:$(node_version)
 
 push:
 	docker push $(image):$(version)

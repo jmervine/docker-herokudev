@@ -1,7 +1,7 @@
 from heroku/cedar:14
 
 env PHANTOMJS_VERSION 2.1.1
-env NODE_VERSION 4.3.1
+env NODE_VERSION 6.9.3
 
 # build / dev deps not included in cedar:14
 run \
