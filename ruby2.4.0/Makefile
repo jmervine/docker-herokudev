@@ -3,6 +3,7 @@ version=2.4.0
 
 build:
 	docker build -t $(image):$(version) .
+	docker rmi $(image):latest || true
 	docker tag $(image):$(version) \
 		$(image):latest
 
