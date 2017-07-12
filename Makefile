@@ -1,6 +1,6 @@
 image=jmervine/herokudev
 version=cedar14
-node_version=7.7.1
+node_version=7.10.1
 
 build:
 	-docker rmi $(image):latest $(image)-node:latest $(image)-node:$(node_version)
