@@ -26,6 +26,7 @@ rebuild/ruby:
 	cd ruby2.3.1; make build
 	cd ruby2.3.3; make build
 	cd ruby2.4.0; make build
+	cd ruby2.4.1; make build
 
 rebuild:
 	# build everything in order, go take a nap
@@ -43,6 +44,7 @@ repush/ruby:
 	cd ruby2.3.1; make push
 	cd ruby2.3.3; make push
 	cd ruby2.4.0; make push
+	cd ruby2.4.1; make push
 
 repush:
 	# push everything in order, run to the store, you've got time
