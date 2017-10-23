@@ -10,7 +10,7 @@ cd gen
 go run *.go -h
 ```
 
-### TODO
+##### TODO
 
 - Because the current alpha sorting won't always be good enough, add the
   concept of dependencies. The basic idea is to have an array that holds
