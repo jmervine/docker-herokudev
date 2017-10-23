@@ -24,4 +24,5 @@ go run *.go -h
 - Add alias support, e.g. jmervine/herokudev-base -> jmervine/herokudev.
   This should also support all versions including latest.
 - Extrat generator in to it's own repo for use with other projects, e.g.
-  jmervine/mini*
+  jmervine/mini\*
+- Consider supporting `herokudev-rails` again.
