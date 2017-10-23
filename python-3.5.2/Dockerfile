@@ -7,6 +7,9 @@ from jmervine/herokudev-base:heroku16
 # 
 # 
 
+run mv /usr/bin/python /usr/bin/python2
+run ln -s /usr/bin/python3 /usr/bin/python
+
 
 run mkdir -p /src
 workdir /src

@@ -3,10 +3,13 @@
 from {{.Source}}
 
 # currently only supports native
+# TODO: include support for building additional python versions.
 # {{if not .Native}}
 # {{end}}
-
-env PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+{{if eq .Version "3.5.2" }}
+run mv /usr/bin/python /usr/bin/python2
+run ln -s /usr/bin/python3 /usr/bin/python
+{{end}}
 
 run mkdir -p /src
 workdir /src

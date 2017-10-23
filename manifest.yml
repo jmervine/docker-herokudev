@@ -13,7 +13,10 @@
 - image: python
   version: 2.7.12
   source: jmervine/herokudev-base:heroku16
-  native: true
+  #native: true
+- image: python
+  version: 3.5.2
+  source: jmervine/herokudev-base:heroku16
 
 # node images
 - image: node
