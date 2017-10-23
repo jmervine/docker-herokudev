@@ -1,0 +1,50 @@
+# order matters when it comes to images, not versions
+# ---------------------------------------------------
+# base images
+- image: base
+  version: heroku16
+  source: heroku/heroku:16
+  latest: true
+- image: base
+  version: cedar14
+  source: heroku/cedar:14
+
+# python
+- image: python
+  version: 2.7.12
+  source: jmervine/herokudev-base:heroku16
+  native: true
+
+# node images
+- image: node
+  version: 8.7.0
+  source: jmervine/herokudev-base:heroku16
+- image: node
+  version: 7.10.1
+  source: jmervine/herokudev-base:heroku16
+- image: node
+  version: 6.11.4
+  source: jmervine/herokudev-base:heroku16
+  latest: true # because it's LTS
+
+# ruby images
+- image: ruby
+  version: 2.1.4
+  source: jmervine/herokudev-node:latest
+- image: ruby
+  version: 2.2.8
+  source: jmervine/herokudev-node:latest
+- image: ruby
+  version: 2.3.1
+  source: jmervine/herokudev-node:latest
+  native: true
+- image: ruby
+  version: 2.3.5
+  source: jmervine/herokudev-node:latest
+- image: ruby
+  version: 2.4.1
+  source: jmervine/herokudev-node:latest
+- image: ruby
+  version: 2.4.2
+  source: jmervine/herokudev-node:latest
+  latest: true
