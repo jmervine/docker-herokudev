@@ -10,6 +10,7 @@ import (
 	"os/exec"
 	"path"
 	"path/filepath"
+	"sort"
 	"strings"
 	"sync"
 	tmpl "text/template"
@@ -41,11 +42,12 @@ func loadManifest(file string) (Manifest, error) {
 }
 
 func (m Manifest) builds() (Manifest, error) {
-	if image == "" && version == "" {
-		return m, nil
-	}
-
 	builds := make(Manifest, 0)
+
+	if image == "" && version == "" {
+		builds = m
+		return builds, nil
+	}
 
 	for _, v := range m {
 		if image != "" && v.Image == image {
@@ -69,16 +71,23 @@ func (m Manifest) builds() (Manifest, error) {
 
 func (m Manifest) generate() error {
 	sets := make(map[string][]Version)
+	keys := make([]string, 0)
 
 	// Build order matters for image sets, not version.
 	for _, v := range m {
 		if len(sets[v.Image]) == 0 {
+			keys = append(keys, v.Image)
 			sets[v.Image] = make([]Version, 0)
 		}
 		sets[v.Image] = append(sets[v.Image], v)
 	}
 
-	for _, vers := range sets {
+	// Enforce order
+	sort.Strings(keys)
+
+	for _, k := range keys {
+		vers := sets[k]
+
 		var wg sync.WaitGroup
 		wg.Add(len(vers))
 

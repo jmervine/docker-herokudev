@@ -66,6 +66,10 @@ func main() {
 func parseArgs() {
 	flag.Parse()
 
+	if !build { // don't remove if not building
+		remove = false
+	}
+
 	outdir = expand(outdir, true)
 	tmpldir = expand(tmpldir, false)
 	manifile = expand(manifile, false)
