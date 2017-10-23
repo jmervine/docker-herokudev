@@ -1,5 +1,7 @@
-# order matters when it comes to images, not versions
-# ---------------------------------------------------
+# Order matters when it comes to building images, currently though, they're
+# build in alphabetical order. Which works because "base" needs to be first
+# and then "node", after that, it doesn't matter.
+# -------------------------------------------------------------------------
 # base images
 - image: base
   version: heroku16
