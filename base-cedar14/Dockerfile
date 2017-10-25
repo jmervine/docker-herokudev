@@ -1,5 +1,8 @@
-# WARNING --- This file is dynamically generated, do not edit!
-###############################################################################
+# WARNING
+# -------
+# This file is dynamically generated, do not edit!
+# See https://github.com/jmervine/imagend for generator details.
+
 from heroku/cedar:14
 
 env PHANTOMJS_VERSION 2.1.1
@@ -41,3 +44,4 @@ run mkdir -p /src
 workdir /src
 
 cmd /bin/bash
+/bash

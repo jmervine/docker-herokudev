@@ -1,5 +1,8 @@
-# WARNING --- This file is dynamically generated, do not edit!
-###############################################################################
+# WARNING
+# -------
+# This file is dynamically generated, do not edit!
+# See https://github.com/jmervine/imagend for generator details.
+
 from jmervine/herokudev-base:heroku16
 env NODE_VERSION 6.11.4
 
@@ -16,3 +19,4 @@ run mkdir -p /src
 workdir /src
 
 cmd /bin/bash
+/bash
