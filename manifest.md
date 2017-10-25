@@ -1,55 +1,65 @@
 # Images
-
-#### [jmervine/herokudev-base](https://hub.docker.com/r/jmervine/herokudev-base)
-- [jmervine/herokudev-base:cedar14](https://hub.docker.com/r/jmervine/herokudev-base/tags/)
-- [jmervine/herokudev:cedar14](https://hub.docker.com/r/jmervine/herokudev/tags/)
-
-#### [jmervine/herokudev-base](https://hub.docker.com/r/jmervine/herokudev-base)
-- [jmervine/herokudev-base:heroku16](https://hub.docker.com/r/jmervine/herokudev-base/tags/)
-- [jmervine/herokudev-base:latest](https://hub.docker.com/r/jmervine/herokudev-base/tags/)
-- [jmervine/herokudev:heroku16](https://hub.docker.com/r/jmervine/herokudev/tags/)
-
-#### [jmervine/herokudev](https://hub.docker.com/r/jmervine/herokudev)
-- [jmervine/herokudev:latest](https://hub.docker.com/r/jmervine/herokudev/tags/)
-- [jmervine/herokudev-node:6.11.4](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-
-#### [jmervine/herokudev-node](https://hub.docker.com/r/jmervine/herokudev-node)
-- [jmervine/herokudev-node:latest](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:6.11](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:6](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:7.10.1](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:7.10](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:7](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:8.7.0](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:8.7](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-node:8](https://hub.docker.com/r/jmervine/herokudev-node/tags/)
-- [jmervine/herokudev-python:3.5.2](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-
-#### [jmervine/herokudev-python](https://hub.docker.com/r/jmervine/herokudev-python)
-- [jmervine/herokudev-python:latest](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-python:3.5](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-python:3](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-python:2.7.12](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-python:2.7](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-python:2](https://hub.docker.com/r/jmervine/herokudev-python/tags/)
-- [jmervine/herokudev-ruby:2.1.4](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-
-#### [jmervine/herokudev-ruby](https://hub.docker.com/r/jmervine/herokudev-ruby)
-- [jmervine/herokudev-ruby:2.1](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.2.8](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.2](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.3.1](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.3.5](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.3](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.4.1](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.4.2](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:latest](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2.4](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
-- [jmervine/herokudev-ruby:2](https://hub.docker.com/r/jmervine/herokudev-ruby/tags/)
+> Note: Tag list includes any aliases and all tags. Order doesn't indicate
+> assocation. See image through associated link to hub.docker.com for details.
 
 
+### [jmervine/herokudev-base](https://hub.docker.com/r/jmervine/herokudev-base/)
 
-_Last updated: 2017-10-25 03:33:32.215404055 +0000 UTC_
+**Available tags:**
+
+- jmervine/herokudev:latest
+- jmervine/herokudev:heroku16
+- jmervine/herokudev:cedar14
+- jmervine/herokudev-base:latest
+- jmervine/herokudev-base:heroku16
+- jmervine/herokudev-base:cedar14
+
+### [jmervine/herokudev-node](https://hub.docker.com/r/jmervine/herokudev-node/)
+
+**Available tags:**
+
+- jmervine/herokudev-node:latest
+- jmervine/herokudev-node:8.7.0
+- jmervine/herokudev-node:8.7
+- jmervine/herokudev-node:8
+- jmervine/herokudev-node:7.10.1
+- jmervine/herokudev-node:7.10
+- jmervine/herokudev-node:7
+- jmervine/herokudev-node:6.11.4
+- jmervine/herokudev-node:6.11
+- jmervine/herokudev-node:6
+
+### [jmervine/herokudev-python](https://hub.docker.com/r/jmervine/herokudev-python/)
+
+**Available tags:**
+
+- jmervine/herokudev-python:latest
+- jmervine/herokudev-python:3.5.2
+- jmervine/herokudev-python:3.5
+- jmervine/herokudev-python:3
+- jmervine/herokudev-python:2.7.12
+- jmervine/herokudev-python:2.7
+- jmervine/herokudev-python:2
+
+### [jmervine/herokudev-ruby](https://hub.docker.com/r/jmervine/herokudev-ruby/)
+
+**Available tags:**
+
+- jmervine/herokudev-ruby:latest
+- jmervine/herokudev-ruby:2.4.2
+- jmervine/herokudev-ruby:2.4.1
+- jmervine/herokudev-ruby:2.4
+- jmervine/herokudev-ruby:2.3.5
+- jmervine/herokudev-ruby:2.3.1
+- jmervine/herokudev-ruby:2.3
+- jmervine/herokudev-ruby:2.2.8
+- jmervine/herokudev-ruby:2.2
+- jmervine/herokudev-ruby:2.1.4
+- jmervine/herokudev-ruby:2.1
+- jmervine/herokudev-ruby:2
+
+
+_Last updated: 2017-10-25 16:36:33.818180761 +0000 UTC_
 
 ---
 **Auto-generated by [imagend](https://github.com/jmervine/imagend)**
