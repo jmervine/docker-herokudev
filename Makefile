@@ -1,9 +1,12 @@
 IMAGEND=$(echo "$(GOBIN)/imagend")
 
-test:
-	imagend -b=false -p=false -x=false
+test: $(IMAGEND)
+	imagend --verify
 
-suite:
+docs: $(IMAGEND)
+	imagend --docs
+
+suite: $(IMAGEND)
 	imagend
 
 $(IMAGEND):

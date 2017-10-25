@@ -1,0 +1,387 @@
+Sending build context to Docker daemon  3.072kB
+Step 1/9 : FROM heroku/cedar:14
+ ---> 265d2abb5d1b
+Step 2/9 : ENV PHANTOMJS_VERSION 2.1.1
+ ---> Using cache
+ ---> 294db701660d
+Step 3/9 : RUN apt-get update &&     apt-get install -y         build-essential         zlib1g-dev         libssl-dev         vim         libcurl3-dev         libffi-dev         libsqlite3-dev &&     apt-get autoremove -y &&     apt-get clean all &&     apt-get purge -y &&     rm -rf /var/lib/apt/lists/*
+ ---> Running in 8bd472ef0b3a
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://apt.postgresql.org trusty-pgdg InRelease [56.4 kB]
+Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:3 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
+Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
+Get:6 http://apt.postgresql.org trusty-pgdg/main amd64 Packages [135 kB]
+Get:7 http://archive.ubuntu.com trusty-security/main amd64 Packages [842 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1283 kB]
+Get:9 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:10 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Fetched 11.8 MB in 7s (1644 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version.
+zlib1g-dev is already the newest version.
+The following extra packages will be installed:
+  curl libcurl3 libffi6 libgpm2 libssl1.0.0 vim-common vim-runtime
+Suggested packages:
+  libcurl4-doc libcurl3-dbg gpm sqlite3-doc ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libffi-dev libgpm2 libsqlite3-dev vim vim-common vim-runtime
+The following packages will be upgraded:
+  curl libcurl3 libcurl4-openssl-dev libffi6 libssl-dev libssl1.0.0
+6 upgraded, 6 newly installed, 0 to remove and 152 not upgraded.
+Need to get 8950 kB of archives.
+After this operation, 30.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-security/main libffi6 amd64 3.1~rc1+r3.0.13-12ubuntu0.2 [17.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-security/main libssl-dev amd64 1.0.1f-1ubuntu2.22 [1074 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-security/main libssl1.0.0 amd64 1.0.1f-1ubuntu2.22 [828 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-security/main curl amd64 7.35.0-1ubuntu2.11 [123 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-security/main libcurl4-openssl-dev amd64 7.35.0-1ubuntu2.11 [245 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-security/main libcurl3 amd64 7.35.0-1ubuntu2.11 [174 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main libgpm2 amd64 1.20.4-6.1 [16.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim-common amd64 2:7.4.052-1ubuntu3.1 [95.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-security/main libsqlite3-dev amd64 3.8.2-1ubuntu2.1 [439 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim-runtime all 2:7.4.052-1ubuntu3.1 [4882 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim amd64 2:7.4.052-1ubuntu3.1 [955 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-security/main libffi-dev amd64 3.1~rc1+r3.0.13-12ubuntu0.2 [100 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 8950 kB in 4s (2053 kB/s)
+(Reading database ... 50415 files and directories currently installed.)
+Preparing to unpack .../libffi6_3.1~rc1+r3.0.13-12ubuntu0.2_amd64.deb ...
+Unpacking libffi6:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) over (3.1~rc1+r3.0.13-12ubuntu0.1) ...
+Preparing to unpack .../libssl-dev_1.0.1f-1ubuntu2.22_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.0.1f-1ubuntu2.22) over (1.0.1f-1ubuntu2.21) ...
+Preparing to unpack .../libssl1.0.0_1.0.1f-1ubuntu2.22_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.1f-1ubuntu2.22) over (1.0.1f-1ubuntu2.21) ...
+Preparing to unpack .../curl_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking curl (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Preparing to unpack .../libcurl4-openssl-dev_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking libcurl4-openssl-dev:amd64 (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Preparing to unpack .../libcurl3_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking libcurl3:amd64 (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.4-6.1_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.4-6.1) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../vim-common_2%3a7.4.052-1ubuntu3.1_amd64.deb ...
+Unpacking vim-common (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package libsqlite3-dev:amd64.
+Preparing to unpack .../libsqlite3-dev_3.8.2-1ubuntu2.1_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 (3.8.2-1ubuntu2.1) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a7.4.052-1ubuntu3.1_all.deb ...
+Adding 'diversion of /usr/share/vim/vim74/doc/help.txt to /usr/share/vim/vim74/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim74/doc/tags to /usr/share/vim/vim74/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a7.4.052-1ubuntu3.1_amd64.deb ...
+Unpacking vim (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package libffi-dev:amd64.
+Preparing to unpack .../libffi-dev_3.1~rc1+r3.0.13-12ubuntu0.2_amd64.deb ...
+Unpacking libffi-dev:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+Setting up libffi6:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Setting up libssl1.0.0:amd64 (1.0.1f-1ubuntu2.22) ...
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0mSetting up libssl-dev:amd64 (1.0.1f-1ubuntu2.22) ...
+Setting up libcurl3:amd64 (7.35.0-1ubuntu2.11) ...
+Setting up curl (7.35.0-1ubuntu2.11) ...
+Setting up libcurl4-openssl-dev:amd64 (7.35.0-1ubuntu2.11) ...
+Setting up libgpm2:amd64 (1.20.4-6.1) ...
+Setting up vim-common (2:7.4.052-1ubuntu3.1) ...
+Setting up libsqlite3-dev:amd64 (3.8.2-1ubuntu2.1) ...
+Setting up vim-runtime (2:7.4.052-1ubuntu3.1) ...
+Processing /usr/share/vim/addons/doc
+Setting up vim (2:7.4.052-1ubuntu3.1) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+Setting up libffi-dev:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 152 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 152 not upgraded.
+ ---> 8aac27f176e3
+Removing intermediate container 8bd472ef0b3a
+Step 4/9 : RUN mkdir -p /srv/var &&     wget -q --no-check-certificate -O       /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2       https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     tar -xjf /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 -C /tmp &&     rm -f /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     mv /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/ /srv/var/phantomjs &&     ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
+ ---> Running in 646bd3647583
+ ---> 897abcf6119d
+Removing intermediate container 646bd3647583
+Step 5/9 : RUN wget -qO- https://toolbelt.heroku.com/install.sh |       sed 's@sudo -k@#sudo -k@g' | sed 's@sudo sh@sh@g' | sh
+ ---> Running in 758cad9e0d7a
+This script requires superuser access to install software.
+You will be prompted for your password by sudo.
+Add the Heroku CLI to your PATH using:
+$ echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
+ ---> 8e7143e2ba8a
+Removing intermediate container 758cad9e0d7a
+Step 6/9 : ENV PATH /user/local/heroku/bin:$PATH
+ ---> Running in 45a6fccc0dca
+ ---> f195ae400eba
+Removing intermediate container 45a6fccc0dca
+Step 7/9 : RUN mkdir -p /src
+ ---> Running in b96e884d5b59
+ ---> 42b90d4f24fb
+Removing intermediate container b96e884d5b59
+Step 8/9 : WORKDIR /src
+ ---> 9ae2cbe02ed2
+Removing intermediate container b4dede29c3ca
+Step 9/9 : CMD /bin/bash
+ ---> Running in 35b058b87132
+ ---> 9f3f288b497c
+Removing intermediate container 35b058b87132
+Successfully built 9f3f288b497c
+Successfully tagged jmervine/herokudev-base:cedar14
+Untagged: jmervine/herokudev-base:cedar14
+Deleted: sha256:9f3f288b497cc8d87023b3a8f877086be73050adc6523f716cd1438ae300be49
+Deleted: sha256:9ae2cbe02ed27ef605b47597cf5840c06395d80c1ca64f0a4c51bf41f9bff868
+Deleted: sha256:42b90d4f24fb9d79e56d10b744f115cf9eede38664247f1943487d2305ffc98a
+Deleted: sha256:8bfd22c976b20e2519d4c9c5d4735baf767d578d26066d0a705491452a18d2d8
+Deleted: sha256:f195ae400eba217cd3adcd9d04fa4eddb587a6cf0dcf466c37809295c69d93c2
+Deleted: sha256:8e7143e2ba8afd81b547dbc6635c785596ae623f0ce5740d454141f6d256aa05
+Deleted: sha256:82924677d8df63dd94e4509007ac85c8aed502b1cc18c77c12802f8913102b71
+Deleted: sha256:897abcf6119d25eab1d031f7fc8e668ced982dd874b26bea6b5be7b8c18dade8
+Deleted: sha256:90f7d095a46c03d1647179f9e43ab96e71e4e769311f79e397c2efb6baa3ffe7
+Deleted: sha256:8aac27f176e348d4b982e33bee4c8570e82b4335110be8cd0129baec61536808
+Deleted: sha256:a1b84a7c32796463edac12215e5a7b3223f150b206b95b53805461fd90f13b1b
+Sending build context to Docker daemon  3.072kB
+Step 1/9 : FROM heroku/cedar:14
+ ---> 265d2abb5d1b
+Step 2/9 : ENV PHANTOMJS_VERSION 2.1.1
+ ---> Using cache
+ ---> 294db701660d
+Step 3/9 : RUN apt-get update &&     apt-get install -y         build-essential         zlib1g-dev         libssl-dev         vim         libcurl3-dev         libffi-dev         libsqlite3-dev &&     apt-get autoremove -y &&     apt-get clean all &&     apt-get purge -y &&     rm -rf /var/lib/apt/lists/*
+ ---> Running in 7f1b8092d136
+Get:1 http://apt.postgresql.org trusty-pgdg InRelease [56.4 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:3 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
+Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
+Get:6 http://apt.postgresql.org trusty-pgdg/main amd64 Packages [135 kB]
+Get:7 http://archive.ubuntu.com trusty-security/main amd64 Packages [842 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1283 kB]
+Get:9 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:10 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Fetched 11.8 MB in 7s (1590 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version.
+zlib1g-dev is already the newest version.
+The following extra packages will be installed:
+  curl libcurl3 libffi6 libgpm2 libssl1.0.0 vim-common vim-runtime
+Suggested packages:
+  libcurl4-doc libcurl3-dbg gpm sqlite3-doc ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libffi-dev libgpm2 libsqlite3-dev vim vim-common vim-runtime
+The following packages will be upgraded:
+  curl libcurl3 libcurl4-openssl-dev libffi6 libssl-dev libssl1.0.0
+6 upgraded, 6 newly installed, 0 to remove and 152 not upgraded.
+Need to get 8950 kB of archives.
+After this operation, 30.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-security/main libffi6 amd64 3.1~rc1+r3.0.13-12ubuntu0.2 [17.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-security/main libssl-dev amd64 1.0.1f-1ubuntu2.22 [1074 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-security/main libssl1.0.0 amd64 1.0.1f-1ubuntu2.22 [828 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-security/main curl amd64 7.35.0-1ubuntu2.11 [123 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-security/main libcurl4-openssl-dev amd64 7.35.0-1ubuntu2.11 [245 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-security/main libcurl3 amd64 7.35.0-1ubuntu2.11 [174 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main libgpm2 amd64 1.20.4-6.1 [16.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim-common amd64 2:7.4.052-1ubuntu3.1 [95.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-security/main libsqlite3-dev amd64 3.8.2-1ubuntu2.1 [439 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim-runtime all 2:7.4.052-1ubuntu3.1 [4882 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty-security/main vim amd64 2:7.4.052-1ubuntu3.1 [955 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-security/main libffi-dev amd64 3.1~rc1+r3.0.13-12ubuntu0.2 [100 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 8950 kB in 5s (1562 kB/s)
+(Reading database ... 50415 files and directories currently installed.)
+Preparing to unpack .../libffi6_3.1~rc1+r3.0.13-12ubuntu0.2_amd64.deb ...
+Unpacking libffi6:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) over (3.1~rc1+r3.0.13-12ubuntu0.1) ...
+Preparing to unpack .../libssl-dev_1.0.1f-1ubuntu2.22_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.0.1f-1ubuntu2.22) over (1.0.1f-1ubuntu2.21) ...
+Preparing to unpack .../libssl1.0.0_1.0.1f-1ubuntu2.22_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.1f-1ubuntu2.22) over (1.0.1f-1ubuntu2.21) ...
+Preparing to unpack .../curl_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking curl (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Preparing to unpack .../libcurl4-openssl-dev_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking libcurl4-openssl-dev:amd64 (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Preparing to unpack .../libcurl3_7.35.0-1ubuntu2.11_amd64.deb ...
+Unpacking libcurl3:amd64 (7.35.0-1ubuntu2.11) over (7.35.0-1ubuntu2.10) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.4-6.1_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.4-6.1) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../vim-common_2%3a7.4.052-1ubuntu3.1_amd64.deb ...
+Unpacking vim-common (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package libsqlite3-dev:amd64.
+Preparing to unpack .../libsqlite3-dev_3.8.2-1ubuntu2.1_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 (3.8.2-1ubuntu2.1) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a7.4.052-1ubuntu3.1_all.deb ...
+Adding 'diversion of /usr/share/vim/vim74/doc/help.txt to /usr/share/vim/vim74/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim74/doc/tags to /usr/share/vim/vim74/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a7.4.052-1ubuntu3.1_amd64.deb ...
+Unpacking vim (2:7.4.052-1ubuntu3.1) ...
+Selecting previously unselected package libffi-dev:amd64.
+Preparing to unpack .../libffi-dev_3.1~rc1+r3.0.13-12ubuntu0.2_amd64.deb ...
+Unpacking libffi-dev:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+Setting up libffi6:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Setting up libssl1.0.0:amd64 (1.0.1f-1ubuntu2.22) ...
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0mSetting up libssl-dev:amd64 (1.0.1f-1ubuntu2.22) ...
+Setting up libcurl3:amd64 (7.35.0-1ubuntu2.11) ...
+Setting up curl (7.35.0-1ubuntu2.11) ...
+Setting up libcurl4-openssl-dev:amd64 (7.35.0-1ubuntu2.11) ...
+Setting up libgpm2:amd64 (1.20.4-6.1) ...
+Setting up vim-common (2:7.4.052-1ubuntu3.1) ...
+Setting up libsqlite3-dev:amd64 (3.8.2-1ubuntu2.1) ...
+Setting up vim-runtime (2:7.4.052-1ubuntu3.1) ...
+Processing /usr/share/vim/addons/doc
+Setting up vim (2:7.4.052-1ubuntu3.1) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+Setting up libffi-dev:amd64 (3.1~rc1+r3.0.13-12ubuntu0.2) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 152 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 152 not upgraded.
+ ---> 6cd51c1aa6c2
+Removing intermediate container 7f1b8092d136
+Step 4/9 : RUN mkdir -p /srv/var &&     wget -q --no-check-certificate -O       /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2       https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     tar -xjf /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 -C /tmp &&     rm -f /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     mv /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/ /srv/var/phantomjs &&     ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
+ ---> Running in f0b8172c01db
+ ---> 7c8cf6194232
+Removing intermediate container f0b8172c01db
+Step 5/9 : RUN wget -qO- https://toolbelt.heroku.com/install.sh |       sed 's@sudo -k@#sudo -k@g' | sed 's@sudo sh@sh@g' | sh
+ ---> Running in 3e8544592e34
+This script requires superuser access to install software.
+You will be prompted for your password by sudo.
+Add the Heroku CLI to your PATH using:
+$ echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
+ ---> 0363d8897043
+Removing intermediate container 3e8544592e34
+Step 6/9 : ENV PATH /user/local/heroku/bin:$PATH
+ ---> Running in 662803ab0fe6
+ ---> 98e1bd093f81
+Removing intermediate container 662803ab0fe6
+Step 7/9 : RUN mkdir -p /src
+ ---> Running in 6a6632416eab
+ ---> 86e530e7f98a
+Removing intermediate container 6a6632416eab
+Step 8/9 : WORKDIR /src
+ ---> 5075c77e887e
+Removing intermediate container dc91f9e6d0de
+Step 9/9 : CMD /bin/bash
+ ---> Running in 71edecf3db43
+ ---> 8cde74bfb77e
+Removing intermediate container 71edecf3db43
+Successfully built 8cde74bfb77e
+Successfully tagged jmervine/herokudev-base:cedar14
+The push refers to a repository [docker.io/jmervine/herokudev-base]
+41ed3b52718d: Preparing
+9922a63496e5: Preparing
+39381cd9fd6a: Preparing
+b3f53efc6a48: Preparing
+c4ce3ce24c52: Preparing
+686144faf12f: Preparing
+5f70bf18a086: Preparing
+45befd8a8901: Preparing
+686144faf12f: Waiting
+5f70bf18a086: Waiting
+45befd8a8901: Waiting
+c4ce3ce24c52: Mounted from jmervine/herokudev-ruby
+41ed3b52718d: Pushed
+686144faf12f: Mounted from jmervine/herokudev-ruby
+5f70bf18a086: Mounted from jmervine/herokudev-ruby
+45befd8a8901: Mounted from jmervine/herokudev-ruby
+9922a63496e5: Pushed
+b3f53efc6a48: Pushed
+39381cd9fd6a: Pushed
+cedar14: digest: sha256:452cd8292806dcaf7ea597c3a9be19a21ba9bf02439cadcf0b0400d5337ee8fe size: 1997
+Sending build context to Docker daemon  3.072kB
+Step 1/9 : FROM heroku/cedar:14
+ ---> 265d2abb5d1b
+Step 2/9 : ENV PHANTOMJS_VERSION 2.1.1
+ ---> Using cache
+ ---> 294db701660d
+Step 3/9 : RUN apt-get update &&     apt-get install -y         build-essential         zlib1g-dev         libssl-dev         vim         libcurl3-dev         libffi-dev         libsqlite3-dev &&     apt-get autoremove -y &&     apt-get clean all &&     apt-get purge -y &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 6cd51c1aa6c2
+Step 4/9 : RUN mkdir -p /srv/var &&     wget -q --no-check-certificate -O       /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2       https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     tar -xjf /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 -C /tmp &&     rm -f /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 &&     mv /tmp/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/ /srv/var/phantomjs &&     ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
+ ---> Using cache
+ ---> 7c8cf6194232
+Step 5/9 : RUN wget -qO- https://toolbelt.heroku.com/install.sh |       sed 's@sudo -k@#sudo -k@g' | sed 's@sudo sh@sh@g' | sh
+ ---> Using cache
+ ---> 0363d8897043
+Step 6/9 : ENV PATH /user/local/heroku/bin:$PATH
+ ---> Using cache
+ ---> 98e1bd093f81
+Step 7/9 : RUN mkdir -p /src
+ ---> Using cache
+ ---> 86e530e7f98a
+Step 8/9 : WORKDIR /src
+ ---> Using cache
+ ---> 5075c77e887e
+Step 9/9 : CMD /bin/bash
+ ---> Using cache
+ ---> 8cde74bfb77e
+Successfully built 8cde74bfb77e
+Successfully tagged jmervine/herokudev-base:cedar14
+The push refers to a repository [docker.io/jmervine/herokudev-base]
+41ed3b52718d: Preparing
+9922a63496e5: Preparing
+39381cd9fd6a: Preparing
+b3f53efc6a48: Preparing
+c4ce3ce24c52: Preparing
+686144faf12f: Preparing
+5f70bf18a086: Preparing
+45befd8a8901: Preparing
+686144faf12f: Waiting
+5f70bf18a086: Waiting
+45befd8a8901: Waiting
+41ed3b52718d: Layer already exists
+39381cd9fd6a: Layer already exists
+9922a63496e5: Layer already exists
+b3f53efc6a48: Layer already exists
+c4ce3ce24c52: Layer already exists
+686144faf12f: Layer already exists
+45befd8a8901: Layer already exists
+5f70bf18a086: Layer already exists
+cedar14: digest: sha256:452cd8292806dcaf7ea597c3a9be19a21ba9bf02439cadcf0b0400d5337ee8fe size: 1997

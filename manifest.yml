@@ -1,55 +1,104 @@
 # Order matters when it comes to building images, currently though, they're
 # build in alphabetical order. Which works because "base" needs to be first
 # and then "node", after that, it doesn't matter.
+#
+# See github.com/jmervine/imagend  for generator details.
 # -------------------------------------------------------------------------
 # base images
-- image: base
+- name: base
+  image: jmervine/herokudev-base
   version: heroku16
   source: heroku/heroku:16
-  latest: true
-- image: base
+  priority: -2
+  aliases:
+  - jmervine/herokudev
+  tags:
+  - latest
+- name: base
+  image: jmervine/herokudev-base
   version: cedar14
   source: heroku/cedar:14
-
-# python
-- image: python
-  version: 2.7.12
-  source: jmervine/herokudev-base:heroku16
-  #native: true
-- image: python
-  version: 3.5.2
-  source: jmervine/herokudev-base:heroku16
+  priority: -2
+  aliases:
+  - jmervine/herokudev
 
 # node images
-- image: node
+- name: node
+  image: jmervine/herokudev-node
   version: 8.7.0
+  semver: true
   source: jmervine/herokudev-base:heroku16
-- image: node
+  tags:
+  - 8.7
+  - 8
+- name: node
+  image: jmervine/herokudev-node
   version: 7.10.1
+  semver: true
   source: jmervine/herokudev-base:heroku16
-- image: node
+  tags:
+  - 7.10
+  - 7
+- name: node
+  image: jmervine/herokudev-node
   version: 6.11.4
   source: jmervine/herokudev-base:heroku16
-  latest: true # because it's LTS
+  priority: -1
+  tags:
+  - latest
+  - 6.11
+  - 6
 
-# ruby images
-- image: ruby
+# python
+- name: python
+  image: jmervine/herokudev-python
+  version: 2.7.12
+  source: jmervine/herokudev-base:heroku16
+  tags:
+  - 2.7
+  - 2
+- name: python
+  image: jmervine/herokudev-python
+  version: 3.5.2
+  source: jmervine/herokudev-base:heroku16
+  tags:
+  - latest
+  - 3.5
+  - 3
+
+# jmervine/herokudev-ruby images
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.1.4
   source: jmervine/herokudev-node:latest
-- image: ruby
+  tags:
+  - 2.1
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.2.8
   source: jmervine/herokudev-node:latest
-- image: ruby
+  tags:
+  - 2.2
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.3.1
   source: jmervine/herokudev-node:latest
   native: true
-- image: ruby
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.3.5
   source: jmervine/herokudev-node:latest
-- image: ruby
+  tags:
+  - 2.3
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.4.1
   source: jmervine/herokudev-node:latest
-- image: ruby
+- name: ruby
+  image: jmervine/herokudev-ruby
   version: 2.4.2
   source: jmervine/herokudev-node:latest
-  latest: true
+  tags:
+  - latest
+  - 2.4
+  - 2

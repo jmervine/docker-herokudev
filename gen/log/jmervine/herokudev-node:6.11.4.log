@@ -1,0 +1,389 @@
+Sending build context to Docker daemon   2.56kB
+Step 1/7 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/7 : ENV NODE_VERSION 6.11.4
+ ---> Running in e882764a17d3
+ ---> 0e6992ec7536
+Removing intermediate container e882764a17d3
+Step 3/7 : RUN curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz |   gunzip -c | tar -xf - -C /
+ ---> Running in 57545e2bddfc
+ ---> 8ec64e3ec34c
+Removing intermediate container 57545e2bddfc
+Step 4/7 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Running in 66515c334d72
+ ---> 5d6ab50ba594
+Removing intermediate container 66515c334d72
+Step 5/7 : RUN mkdir -p /src
+ ---> Running in ac0560cf0c79
+ ---> 4b8cf02bb776
+Removing intermediate container ac0560cf0c79
+Step 6/7 : WORKDIR /src
+ ---> 1d80dfb1f43b
+Removing intermediate container f003be684f13
+Step 7/7 : CMD /bin/bash
+ ---> Running in a3a48f25be26
+ ---> 45c785142bb8
+Removing intermediate container a3a48f25be26
+Successfully built 45c785142bb8
+Successfully tagged jmervine/herokudev-node:6.11.4
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+0f5ff0cf6a1c: Waiting
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+c80dabffdc78: Waiting
+fd040abe5224: Waiting
+b97229212d30: Waiting
+4589f96366e6: Waiting
+cd181336f142: Waiting
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+f5b09958a9f1: Layer already exists
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+fd040abe5224: Layer already exists
+29266a1d8b4c: Layer already exists
+49907af65b0a: Layer already exists
+44c5084a0ad6: Layer already exists
+4589f96366e6: Layer already exists
+b97229212d30: Layer already exists
+a08678dcfb27: Pushed
+6.11.4: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+Sending build context to Docker daemon   2.56kB
+Step 1/7 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/7 : ENV NODE_VERSION 6.11.4
+ ---> Using cache
+ ---> 0e6992ec7536
+Step 3/7 : RUN curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz |   gunzip -c | tar -xf - -C /
+ ---> Using cache
+ ---> 8ec64e3ec34c
+Step 4/7 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 5d6ab50ba594
+Step 5/7 : RUN mkdir -p /src
+ ---> Using cache
+ ---> 4b8cf02bb776
+Step 6/7 : WORKDIR /src
+ ---> Using cache
+ ---> 1d80dfb1f43b
+Step 7/7 : CMD /bin/bash
+ ---> Using cache
+ ---> 45c785142bb8
+Successfully built 45c785142bb8
+Successfully tagged jmervine/herokudev-node:6.11.4
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+4589f96366e6: Waiting
+cd181336f142: Waiting
+b97229212d30: Waiting
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+44c5084a0ad6: Waiting
+9e33e404d852: Layer already exists
+a08678dcfb27: Layer already exists
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+fd040abe5224: Layer already exists
+29266a1d8b4c: Layer already exists
+4589f96366e6: Layer already exists
+49907af65b0a: Layer already exists
+b97229212d30: Layer already exists
+44c5084a0ad6: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+6.11.4: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+Sending build context to Docker daemon   2.56kB
+Step 1/7 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/7 : ENV NODE_VERSION 6.11.4
+ ---> Using cache
+ ---> 0e6992ec7536
+Step 3/7 : RUN curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz |   gunzip -c | tar -xf - -C /
+ ---> Using cache
+ ---> 8ec64e3ec34c
+Step 4/7 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 5d6ab50ba594
+Step 5/7 : RUN mkdir -p /src
+ ---> Using cache
+ ---> 4b8cf02bb776
+Step 6/7 : WORKDIR /src
+ ---> Using cache
+ ---> 1d80dfb1f43b
+Step 7/7 : CMD /bin/bash
+ ---> Using cache
+ ---> 45c785142bb8
+Successfully built 45c785142bb8
+Successfully tagged jmervine/herokudev-node:6.11.4
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+a08678dcfb27: Waiting
+cd181336f142: Preparing
+29266a1d8b4c: Waiting
+0f5ff0cf6a1c: Preparing
+44c5084a0ad6: Waiting
+49907af65b0a: Waiting
+b97229212d30: Waiting
+4589f96366e6: Waiting
+0f5ff0cf6a1c: Waiting
+cd181336f142: Waiting
+f5b09958a9f1: Layer already exists
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+fd040abe5224: Layer already exists
+49907af65b0a: Layer already exists
+29266a1d8b4c: Layer already exists
+4589f96366e6: Layer already exists
+44c5084a0ad6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+a08678dcfb27: Layer already exists
+6.11.4: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+44c5084a0ad6: Waiting
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+a08678dcfb27: Layer already exists
+fd040abe5224: Layer already exists
+49907af65b0a: Layer already exists
+4589f96366e6: Layer already exists
+29266a1d8b4c: Layer already exists
+b97229212d30: Layer already exists
+44c5084a0ad6: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+latest: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+Sending build context to Docker daemon   2.56kB
+Step 1/7 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/7 : ENV NODE_VERSION 6.11.4
+ ---> Using cache
+ ---> 0e6992ec7536
+Step 3/7 : RUN curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz |   gunzip -c | tar -xf - -C /
+ ---> Using cache
+ ---> 8ec64e3ec34c
+Step 4/7 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 5d6ab50ba594
+Step 5/7 : RUN mkdir -p /src
+ ---> Using cache
+ ---> 4b8cf02bb776
+Step 6/7 : WORKDIR /src
+ ---> Using cache
+ ---> 1d80dfb1f43b
+Step 7/7 : CMD /bin/bash
+ ---> Using cache
+ ---> 45c785142bb8
+Successfully built 45c785142bb8
+Successfully tagged jmervine/herokudev-node:6.11.4
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+0f5ff0cf6a1c: Waiting
+49907af65b0a: Waiting
+44c5084a0ad6: Waiting
+a08678dcfb27: Waiting
+29266a1d8b4c: Waiting
+b97229212d30: Waiting
+4589f96366e6: Waiting
+cd181336f142: Waiting
+f5b09958a9f1: Layer already exists
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+fd040abe5224: Layer already exists
+49907af65b0a: Layer already exists
+29266a1d8b4c: Layer already exists
+4589f96366e6: Layer already exists
+44c5084a0ad6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+a08678dcfb27: Layer already exists
+6.11.4: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+44c5084a0ad6: Waiting
+29266a1d8b4c: Waiting
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+9e33e404d852: Layer already exists
+a08678dcfb27: Layer already exists
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+fd040abe5224: Layer already exists
+29266a1d8b4c: Layer already exists
+49907af65b0a: Layer already exists
+4589f96366e6: Layer already exists
+44c5084a0ad6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+latest: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+Sending build context to Docker daemon   2.56kB
+Step 1/7 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/7 : ENV NODE_VERSION 6.11.4
+ ---> Using cache
+ ---> 0e6992ec7536
+Step 3/7 : RUN curl -s http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz |   gunzip -c | tar -xf - -C /
+ ---> Using cache
+ ---> 8ec64e3ec34c
+Step 4/7 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 5d6ab50ba594
+Step 5/7 : RUN mkdir -p /src
+ ---> Using cache
+ ---> 4b8cf02bb776
+Step 6/7 : WORKDIR /src
+ ---> Using cache
+ ---> 1d80dfb1f43b
+Step 7/7 : CMD /bin/bash
+ ---> Using cache
+ ---> 45c785142bb8
+Successfully built 45c785142bb8
+Successfully tagged jmervine/herokudev-node:6.11.4
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+0f5ff0cf6a1c: Waiting
+44c5084a0ad6: Waiting
+f5b09958a9f1: Waiting
+29266a1d8b4c: Waiting
+c80dabffdc78: Waiting
+49907af65b0a: Waiting
+b97229212d30: Waiting
+9e33e404d852: Waiting
+4589f96366e6: Waiting
+cd181336f142: Waiting
+a08678dcfb27: Waiting
+fd040abe5224: Layer already exists
+29266a1d8b4c: Layer already exists
+49907af65b0a: Layer already exists
+4589f96366e6: Layer already exists
+44c5084a0ad6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+9e33e404d852: Layer already exists
+a08678dcfb27: Layer already exists
+f5b09958a9f1: Layer already exists
+c80dabffdc78: Layer already exists
+6.11.4: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831
+The push refers to a repository [docker.io/jmervine/herokudev-node]
+a08678dcfb27: Preparing
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+44c5084a0ad6: Waiting
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+a08678dcfb27: Layer already exists
+f5b09958a9f1: Layer already exists
+fd040abe5224: Layer already exists
+4589f96366e6: Layer already exists
+49907af65b0a: Layer already exists
+29266a1d8b4c: Layer already exists
+b97229212d30: Layer already exists
+44c5084a0ad6: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+latest: digest: sha256:f2cc5dd975049d5ee0d51f2f0cd102a1f88e941d5ca3f4c0ad79140694c4f072 size: 2831

@@ -1,0 +1,254 @@
+Error response from daemon: No such image: jmervine/herokudev-python:2.7.12
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/5 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Running in b0934269a82a
+ ---> 7d146ae1d70d
+Removing intermediate container b0934269a82a
+Step 3/5 : RUN mkdir -p /src
+ ---> Running in 4828d466737d
+ ---> e62b0ecfe2b9
+Removing intermediate container 4828d466737d
+Step 4/5 : WORKDIR /src
+ ---> daec06baa142
+Removing intermediate container 64779de59fd1
+Step 5/5 : CMD /bin/bash
+ ---> Running in f1f0d8bb7e56
+ ---> a3562bd0f604
+Removing intermediate container f1f0d8bb7e56
+Successfully built a3562bd0f604
+Successfully tagged jmervine/herokudev-python:2.7.12
+The push refers to a repository [docker.io/jmervine/herokudev-python]
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+9e33e404d852: Mounted from jmervine/herokudev-ruby
+f5b09958a9f1: Mounted from jmervine/herokudev-ruby
+44c5084a0ad6: Mounted from jmervine/herokudev-ruby
+c80dabffdc78: Mounted from jmervine/herokudev-ruby
+fd040abe5224: Mounted from jmervine/herokudev-ruby
+4589f96366e6: Mounted from jmervine/herokudev-ruby
+29266a1d8b4c: Mounted from jmervine/herokudev-ruby
+49907af65b0a: Mounted from jmervine/herokudev-ruby
+cd181336f142: Mounted from jmervine/herokudev-ruby
+b97229212d30: Mounted from jmervine/herokudev-ruby
+0f5ff0cf6a1c: Mounted from jmervine/herokudev-ruby
+2.7.12: digest: sha256:29209b86784edc5b32d980accec1643a8b1a233fce2a194c007c0171a07ede96 size: 2619
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/5 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 7d146ae1d70d
+Step 3/5 : RUN mkdir -p /src
+ ---> Using cache
+ ---> e62b0ecfe2b9
+Step 4/5 : WORKDIR /src
+ ---> Using cache
+ ---> daec06baa142
+Step 5/5 : CMD /bin/bash
+ ---> Using cache
+ ---> a3562bd0f604
+Successfully built a3562bd0f604
+Successfully tagged jmervine/herokudev-python:2.7.12
+The push refers to a repository [docker.io/jmervine/herokudev-python]
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+b97229212d30: Waiting
+4589f96366e6: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+fd040abe5224: Layer already exists
+44c5084a0ad6: Layer already exists
+29266a1d8b4c: Layer already exists
+49907af65b0a: Layer already exists
+4589f96366e6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+2.7.12: digest: sha256:29209b86784edc5b32d980accec1643a8b1a233fce2a194c007c0171a07ede96 size: 2619
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/5 : ENV PATH /node-v${NODE_VERSION}-linux-x64/bin:$PATH
+ ---> Using cache
+ ---> 7d146ae1d70d
+Step 3/5 : RUN mkdir -p /src
+ ---> Using cache
+ ---> e62b0ecfe2b9
+Step 4/5 : WORKDIR /src
+ ---> Using cache
+ ---> daec06baa142
+Step 5/5 : CMD /bin/bash
+ ---> Using cache
+ ---> a3562bd0f604
+Successfully built a3562bd0f604
+Successfully tagged jmervine/herokudev-python:2.7.12
+The push refers to a repository [docker.io/jmervine/herokudev-python]
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+29266a1d8b4c: Waiting
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+9e33e404d852: Layer already exists
+44c5084a0ad6: Layer already exists
+fd040abe5224: Layer already exists
+4589f96366e6: Layer already exists
+49907af65b0a: Layer already exists
+29266a1d8b4c: Layer already exists
+cd181336f142: Layer already exists
+b97229212d30: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+2.7.12: digest: sha256:29209b86784edc5b32d980accec1643a8b1a233fce2a194c007c0171a07ede96 size: 2619
+Untagged: jmervine/herokudev-python:2.7.12
+Untagged: jmervine/herokudev-python@sha256:29209b86784edc5b32d980accec1643a8b1a233fce2a194c007c0171a07ede96
+Deleted: sha256:a3562bd0f604acd9a35405ece521eec0a72cadddac6625cf0a3c8685df57a57f
+Deleted: sha256:daec06baa1424c816b19f41aa481155623c5fb3e6f9b04641656e72609e5650d
+Deleted: sha256:e62b0ecfe2b922a723bc3117a926fb07b42f30fdd81c7f158b28fd74f4351bfc
+Deleted: sha256:7d146ae1d70dd5e9e5c955c3fb00ed44cc236e6b7dec79344f49b4a6bcbb81bf
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/4 : RUN mkdir -p /src
+ ---> Running in 815a271212b7
+ ---> 0ea889a79855
+Removing intermediate container 815a271212b7
+Step 3/4 : WORKDIR /src
+ ---> 40b6b5306a2a
+Removing intermediate container 20757b9b13e9
+Step 4/4 : CMD /bin/bash
+ ---> Running in f72f9a9665fd
+ ---> eb6c22ddf5ee
+Removing intermediate container f72f9a9665fd
+Successfully built eb6c22ddf5ee
+Successfully tagged jmervine/herokudev-python:2.7.12
+The push refers to a repository [docker.io/jmervine/herokudev-python]
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+49907af65b0a: Waiting
+29266a1d8b4c: Waiting
+f5b09958a9f1: Layer already exists
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+44c5084a0ad6: Layer already exists
+fd040abe5224: Layer already exists
+29266a1d8b4c: Layer already exists
+4589f96366e6: Layer already exists
+49907af65b0a: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+2.7.12: digest: sha256:d21f1f30db06936e6e0e12a71648b77dac0bb1d7823c0b70becdcb0f9ba04fae size: 2619
+Untagged: jmervine/herokudev-python:2.7.12
+Untagged: jmervine/herokudev-python@sha256:d21f1f30db06936e6e0e12a71648b77dac0bb1d7823c0b70becdcb0f9ba04fae
+Deleted: sha256:eb6c22ddf5eefdeee67d85c1002d6a32dad0b25cb34961503a90a89ea1ae689b
+Deleted: sha256:40b6b5306a2ad0b7b4ee1505ec65b46fcaa018020a23a09b3ccc1c69b224d958
+Deleted: sha256:0ea889a798557e4f0684c9794aba1ac3f3129c348ebc26622e18bb9e506bd3ad
+The push refers to a repository [docker.io/jmervine/herokudev-python]
+f5b09958a9f1: Preparing
+9e33e404d852: Preparing
+c80dabffdc78: Preparing
+fd040abe5224: Preparing
+44c5084a0ad6: Preparing
+29266a1d8b4c: Preparing
+49907af65b0a: Preparing
+4589f96366e6: Preparing
+b97229212d30: Preparing
+cd181336f142: Preparing
+0f5ff0cf6a1c: Preparing
+29266a1d8b4c: Waiting
+49907af65b0a: Waiting
+4589f96366e6: Waiting
+b97229212d30: Waiting
+cd181336f142: Waiting
+0f5ff0cf6a1c: Waiting
+9e33e404d852: Layer already exists
+c80dabffdc78: Layer already exists
+f5b09958a9f1: Layer already exists
+44c5084a0ad6: Layer already exists
+fd040abe5224: Layer already exists
+49907af65b0a: Layer already exists
+29266a1d8b4c: Layer already exists
+4589f96366e6: Layer already exists
+b97229212d30: Layer already exists
+cd181336f142: Layer already exists
+0f5ff0cf6a1c: Layer already exists
+2.7.12: digest: sha256:d21f1f30db06936e6e0e12a71648b77dac0bb1d7823c0b70becdcb0f9ba04fae size: 2619
+Untagged: jmervine/herokudev-python:2.7.12
+Untagged: jmervine/herokudev-python@sha256:d21f1f30db06936e6e0e12a71648b77dac0bb1d7823c0b70becdcb0f9ba04fae
+Deleted: sha256:eb6c22ddf5eefdeee67d85c1002d6a32dad0b25cb34961503a90a89ea1ae689b
+Error response from daemon: No such image: jmervine/herokudev-python:2.7.12
+Untagged: jmervine/herokudev-python:2.7.12
+Untagged: jmervine/herokudev-python@sha256:d21f1f30db06936e6e0e12a71648b77dac0bb1d7823c0b70becdcb0f9ba04fae
+Deleted: sha256:eb6c22ddf5eefdeee67d85c1002d6a32dad0b25cb34961503a90a89ea1ae689b
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM jmervine/herokudev-base:heroku16
+ ---> 87b4f0f783bd
+Step 2/4 : RUN mkdir -p /src
+ ---> Running in 470243b085a5
+ ---> 105fed286b31
+Removing intermediate container 470243b085a5
+Step 3/4 : WORKDIR /src
+ ---> d4f825c7bfb3
+Removing intermediate container 614dd0d05f0b
+Step 4/4 : CMD /bin/bash
+ ---> Running in 38c231942ec9
+ ---> 63ebd89d0a81
+Removing intermediate container 38c231942ec9
+Successfully built 63ebd89d0a81
+Successfully tagged jmervine/herokudev-python:2.7.12
