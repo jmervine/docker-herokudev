@@ -40,8 +40,11 @@ run \
 
 env PATH /user/local/heroku/bin:$PATH
 
+# install version check
+run \
+    echo "heroku16" > /etc/herokudev-base
+
 run mkdir -p /src
 workdir /src
 
 cmd /bin/bash
-/bash

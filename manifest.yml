@@ -14,6 +14,9 @@
   - jmervine/herokudev
   tags:
   - latest
+  verify:
+    exec: "cat /etc/herokudev-base"
+    exect: "heroku16"
 - name: base
   image: jmervine/herokudev-base
   version: cedar14
@@ -21,6 +24,9 @@
   priority: -2
   aliases:
   - jmervine/herokudev
+  verify:
+    exec: "cat /etc/herokudev-base"
+    exect: "heroku14"
 
 # node images
 - name: node
