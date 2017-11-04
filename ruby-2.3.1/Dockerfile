@@ -10,4 +10,3 @@ run mkdir -p /src
 workdir /src
 
 cmd /bin/bash
-/bash

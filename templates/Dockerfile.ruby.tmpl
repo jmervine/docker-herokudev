@@ -8,10 +8,10 @@ env RUBY_VERSION {{.Version}}
 {{if not .Native}}
 workdir /tmp
 run \
-    wget http://ftp.ruby-lang.org/pub/ruby/${RUBY_MAJOR}/ruby-${RUBY_VERSION}.tar.gz && \
+    wget http://ftp.ruby-lang.org/pub/ruby/ruby-${RUBY_VERSION}.tar.gz && \
     tar -xzvf ruby-${RUBY_VERSION}.tar.gz && \
     cd ruby-${RUBY_VERSION} && \
-    ./configure && \
+    ./configure --with-readline && \
     make && \
     make install && \
     cd /tmp && \

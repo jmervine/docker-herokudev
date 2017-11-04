@@ -11,7 +11,7 @@ run \
     wget http://ftp.ruby-lang.org/pub/ruby/${RUBY_MAJOR}/ruby-${RUBY_VERSION}.tar.gz && \
     tar -xzvf ruby-${RUBY_VERSION}.tar.gz && \
     cd ruby-${RUBY_VERSION} && \
-    ./configure && \
+    ./configure --with-readline && \
     make && \
     make install && \
     cd /tmp && \
@@ -21,4 +21,3 @@ run mkdir -p /src
 workdir /src
 
 cmd /bin/bash
-/bash
