@@ -31,8 +31,23 @@
 # node images
 - name: node
   image: jmervine/herokudev-node
+  version: 9.0.0
+  source: jmervine/herokudev-base:heroku16
+  tags:
+  - latest
+  - 9.0
+  - 9
+- name: node
+  image: jmervine/herokudev-node
+  version: 8.9.0
+  source: jmervine/herokudev-base:heroku16
+  tags:
+  - lts
+  - 8.9
+  - 8
+- name: node
+  image: jmervine/herokudev-node
   version: 8.7.0
-  semver: true
   source: jmervine/herokudev-base:heroku16
   tags:
   - 8.7
@@ -40,7 +55,6 @@
 - name: node
   image: jmervine/herokudev-node
   version: 7.10.1
-  semver: true
   source: jmervine/herokudev-base:heroku16
   tags:
   - 7.10
@@ -51,7 +65,6 @@
   source: jmervine/herokudev-base:heroku16
   priority: -1
   tags:
-  - latest
   - 6.11
   - 6
 
@@ -76,34 +89,34 @@
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.1.4
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
   tags:
   - 2.1
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.2.8
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
   tags:
   - 2.2
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.3.1
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
   native: true
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.3.5
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
   tags:
   - 2.3
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.4.1
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.4.2
-  source: jmervine/herokudev-node:latest
+  source: jmervine/herokudev-node:lts
   tags:
   - latest
   - 2.4
