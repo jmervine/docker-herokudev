@@ -2,10 +2,11 @@
 # -------
 # This file is dynamically generated, do not edit!
 # See https://github.com/jmervine/imagend for generator details.
-from {{.Source}}
-env PYTHON_VERSION {{.Version}}
+from jmervine/herokudev-base:heroku16
+env PYTHON_VERSION 2.7.14
 
-{{ if not .Native -}}
+# currently only supports native
+# TODO: include support for building additional python versions.
 workdir /tmp
 run \
   wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz && \
@@ -22,13 +23,6 @@ run \
     (mv /usr/bin/python /usr/bin/python2 && \
       rm /usr/bin/python3 && \
       ln -s $(which python3) /usr/bin/python)) || true
-{{ else -}}
-run \
-  (echo ${PYTHON_VERSION} | grep "^3" && \
-    (mv /usr/bin/python /usr/bin/python2 && \
-      ln -s /usr/bin/python3 /usr/bin/python)) || true
-{{ end -}}
-
 run mkdir -p /src
 workdir /src
 

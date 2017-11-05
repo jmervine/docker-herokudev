@@ -51,7 +51,6 @@
   source: jmervine/herokudev-base:heroku16
   tags:
   - 8.7
-  - 8
 - name: node
   image: jmervine/herokudev-node
   version: 7.10.1
@@ -71,19 +70,32 @@
 # python
 - name: python
   image: jmervine/herokudev-python
-  version: 2.7.12
+  version: 2.7.14
   source: jmervine/herokudev-base:heroku16
   tags:
+  - latest
   - 2.7
   - 2
 - name: python
   image: jmervine/herokudev-python
-  version: 3.5.2
+  version: 2.7.12
+  source: jmervine/herokudev-base:heroku16
+  native: true
+- name: python
+  image: jmervine/herokudev-python
+  version: 3.6.3
   source: jmervine/herokudev-base:heroku16
   tags:
   - latest
-  - 3.5
+  - 3.6
   - 3
+- name: python
+  image: jmervine/herokudev-python
+  version: 3.5.2
+  source: jmervine/herokudev-base:heroku16
+  native: true
+  tags:
+  - 3.5
 
 # jmervine/herokudev-ruby images
 - name: ruby
