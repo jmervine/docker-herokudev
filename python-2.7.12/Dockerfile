@@ -5,8 +5,6 @@
 from jmervine/herokudev-base:heroku16
 env PYTHON_VERSION 2.7.12
 
-# currently only supports native
-# TODO: include support for building additional python versions.
 run \
   (echo ${PYTHON_VERSION} | grep "^3" && \
     (mv /usr/bin/python /usr/bin/python2 && \

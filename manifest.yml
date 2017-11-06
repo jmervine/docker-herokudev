@@ -73,7 +73,6 @@
   version: 2.7.14
   source: jmervine/herokudev-base:heroku16
   tags:
-  - latest
   - 2.7
   - 2
 - name: python
