@@ -16,6 +16,8 @@ run \
         vim \
         libcurl3-dev \
         libffi-dev \
+        postgresql-client \
+        libpq-dev \
         libsqlite3-dev \
         libreadline-dev && \
     apt-get autoremove -y && \

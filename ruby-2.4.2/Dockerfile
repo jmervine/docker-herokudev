@@ -17,6 +17,8 @@ run \
     cd /tmp && \
     rm -rf ruby-${RUBY_VERSION}
 
+
+run gem install bundler --no-ri --no-rdoc
 run mkdir -p /src
 workdir /src
 

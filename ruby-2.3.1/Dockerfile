@@ -6,6 +6,8 @@
 from jmervine/herokudev-node:lts
 env RUBY_VERSION 2.3.1
 
+
+run gem install bundler --no-ri --no-rdoc
 run mkdir -p /src
 workdir /src
 
