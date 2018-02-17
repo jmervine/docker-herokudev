@@ -31,20 +31,30 @@
 # node images
 - name: node
   image: jmervine/herokudev-node
-  version: 9.0.0
+  version: 9.5.0
   source: jmervine/herokudev-base:heroku16
   tags:
   - latest
-  - 9.0
+  - 9.5
   - 9
 - name: node
   image: jmervine/herokudev-node
-  version: 8.9.0
+  version: 9.0.0
+  source: jmervine/herokudev-base:heroku16
+  tags:
+  - 9.0
+- name: node
+  image: jmervine/herokudev-node
+  version: 8.9.4
   source: jmervine/herokudev-base:heroku16
   tags:
   - lts
   - 8.9
   - 8
+- name: node
+  image: jmervine/herokudev-node
+  version: 8.9.0
+  source: jmervine/herokudev-base:heroku16
 - name: node
   image: jmervine/herokudev-node
   version: 8.7.0
