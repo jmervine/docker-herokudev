@@ -3,7 +3,7 @@
 # This file is dynamically generated, do not edit!
 # See https://github.com/jmervine/imagend for generator details.
 
-from heroku/cedar:14
+from heroku/heroku:18
 
 env PHANTOMJS_VERSION 2.1.1
 
@@ -18,7 +18,8 @@ run \
         libffi-dev \
         postgresql-client \
         libpq-dev \
-        libsqlite3-dev \ 
+        libsqlite3-dev \
+        libsodium-dev \
         libreadline-dev && \
     apt-get autoremove -y && \
     apt-get clean all && \
@@ -45,7 +46,7 @@ env PATH /user/local/heroku/bin:$PATH
 
 # install version check
 run \
-    echo "cedar14" > /etc/herokudev-base
+    echo "heroku18" > /etc/herokudev-base
 
 run mkdir -p /src
 workdir /src

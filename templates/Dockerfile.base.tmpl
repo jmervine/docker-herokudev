@@ -18,7 +18,8 @@ run \
         libffi-dev \
         postgresql-client \
         libpq-dev \
-        libsqlite3-dev \
+        libsqlite3-dev \ {{if ne .Version "cedar14"}}
+        libsodium-dev \ {{end}}
         libreadline-dev && \
     apt-get autoremove -y && \
     apt-get clean all && \

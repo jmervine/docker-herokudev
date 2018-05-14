@@ -7,6 +7,18 @@
 # base images
 - name: base
   image: jmervine/herokudev-base
+  version: heroku18
+  source: heroku/heroku:18
+  priority: -2
+  aliases:
+  - jmervine/herokudev
+  tags:
+  - latest
+  verify:
+    exec: "cat /etc/herokudev-base"
+    exect: "heroku18"
+- name: base
+  image: jmervine/herokudev-base
   version: heroku16
   source: heroku/heroku:16
   priority: -2
@@ -31,12 +43,25 @@
 # node images
 - name: node
   image: jmervine/herokudev-node
+  version: 10.1.0
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - latest
+  - 10.1
+  - 10
+- name: node
+  image: jmervine/herokudev-node
+  version: 9.11.1
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - 9.11
+  - 9
+- name: node
+  image: jmervine/herokudev-node
   version: 9.5.0
   source: jmervine/herokudev-base:heroku16
   tags:
-  - latest
   - 9.5
-  - 9
 - name: node
   image: jmervine/herokudev-node
   version: 9.0.0
@@ -45,12 +70,18 @@
   - 9.0
 - name: node
   image: jmervine/herokudev-node
+  version: 8.11.1
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - lts
+  - 8.11
+  - 8
+- name: node
+  image: jmervine/herokudev-node
   version: 8.9.4
   source: jmervine/herokudev-base:heroku16
   tags:
-  - lts
   - 8.9
-  - 8
 - name: node
   image: jmervine/herokudev-node
   version: 8.9.0
@@ -80,11 +111,15 @@
 # python
 - name: python
   image: jmervine/herokudev-python
-  version: 2.7.14
-  source: jmervine/herokudev-base:heroku16
+  version: 2.7.15
+  source: jmervine/herokudev-base:heroku18
   tags:
   - 2.7
   - 2
+- name: python
+  image: jmervine/herokudev-python
+  version: 2.7.14
+  source: jmervine/herokudev-base:heroku16
 - name: python
   image: jmervine/herokudev-python
   version: 2.7.12
@@ -92,12 +127,16 @@
   native: true
 - name: python
   image: jmervine/herokudev-python
-  version: 3.6.3
-  source: jmervine/herokudev-base:heroku16
+  version: 3.6.5
+  source: jmervine/herokudev-base:heroku18
   tags:
   - latest
   - 3.6
   - 3
+- name: python
+  image: jmervine/herokudev-python
+  version: 3.6.3
+  source: jmervine/herokudev-base:heroku16
 - name: python
   image: jmervine/herokudev-python
   version: 3.5.2

@@ -19,6 +19,7 @@ run \
         postgresql-client \
         libpq-dev \
         libsqlite3-dev \
+        libsodium-dev \
         libreadline-dev && \
     apt-get autoremove -y && \
     apt-get clean all && \
