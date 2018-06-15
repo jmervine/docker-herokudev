@@ -4,7 +4,7 @@
 # See https://github.com/jmervine/imagend for generator details.
 
 from jmervine/herokudev-node:lts
-env RUBY_VERSION 2.2.8
+env RUBY_VERSION 2.2.7
 
 workdir /tmp
 run \
@@ -17,7 +17,7 @@ run \
     cd /tmp && \
     rm -rf ruby-${RUBY_VERSION}
 
-run apt-get update && apt-get install openssl-dev
+
 run gem install bundler --no-ri --no-rdoc
 run mkdir -p /src
 workdir /src

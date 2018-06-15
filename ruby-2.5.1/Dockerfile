@@ -5,17 +5,8 @@
 
 from jmervine/herokudev-node:lts
 env RUBY_VERSION 2.5.1
+env RUBY_INSTALL_VERSION 0.6.1
 
-workdir /tmp
-run \
-    wget http://ftp.ruby-lang.org/pub/ruby/ruby-${RUBY_VERSION}.tar.gz && \
-    tar -xzvf ruby-${RUBY_VERSION}.tar.gz && \
-    cd ruby-${RUBY_VERSION} && \
-    ./configure --with-readline && \
-    make && \
-    make install && \
-    cd /tmp && \
-    rm -rf ruby-${RUBY_VERSION}
 
 
 run gem install bundler --no-ri --no-rdoc

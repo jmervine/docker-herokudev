@@ -18,7 +18,7 @@ run \
         libffi-dev \
         postgresql-client \
         libpq-dev \
-        libsqlite3-dev \ 
+        libsqlite3-dev \
         libreadline-dev && \
     apt-get autoremove -y && \
     apt-get clean all && \
