@@ -5,6 +5,8 @@
 
 from jmervine/herokudev-base:heroku18
 env NODE_VERSION 8.11.1
+env DEBIAN_FRONTEND=noninteractive
+
 
 # install node binary
 # note: including node as a js runtime for ruby applications

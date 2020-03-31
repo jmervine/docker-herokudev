@@ -2,8 +2,8 @@
 # -------
 # This file is dynamically generated, do not edit!
 # See https://github.com/jmervine/imagend for generator details.
-from jmervine/herokudev-base:heroku16
-env PYTHON_VERSION 2.7.14
+from jmervine/herokudev-base:heroku18
+env PYTHON_VERSION 3.8.2
 env DEBIAN_FRONTEND=noninteractive
 
 workdir /tmp

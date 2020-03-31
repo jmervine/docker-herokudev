@@ -27,24 +27,29 @@
   verify:
     exec: "cat /etc/herokudev-base"
     exect: "heroku16"
-- name: base
-  image: jmervine/herokudev-base
-  version: cedar14
-  source: heroku/cedar:14
-  priority: -2
-  aliases:
-  - jmervine/herokudev
-  verify:
-    exec: "cat /etc/herokudev-base"
-    exect: "heroku14"
 
 # node images
+- name: node
+  image: jmervine/herokudev-node
+  version: 13.12.0
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - latest
+  - 13.12
+  - 13
+- name: node
+  image: jmervine/herokudev-node
+  version: 12.16.1
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - lts
+  - 12.16
+  - 12
 - name: node
   image: jmervine/herokudev-node
   version: 10.1.0
   source: jmervine/herokudev-base:heroku18
   tags:
-  - latest
   - 10.1
   - 10
 - name: node
@@ -71,7 +76,6 @@
   version: 8.11.1
   source: jmervine/herokudev-base:heroku18
   tags:
-  - lts
   - 8.11
   - 8
 - name: node
@@ -106,14 +110,18 @@
   - 6.11
   - 6
 
-# python
+# python 2
 - name: python
   image: jmervine/herokudev-python
-  version: 2.7.15
+  version: 2.7.17
   source: jmervine/herokudev-base:heroku18
   tags:
   - 2.7
   - 2
+- name: python
+  image: jmervine/herokudev-python
+  version: 2.7.15
+  source: jmervine/herokudev-base:heroku18
 - name: python
   image: jmervine/herokudev-python
   version: 2.7.14
@@ -123,14 +131,22 @@
   version: 2.7.12
   source: jmervine/herokudev-base:heroku16
   native: true
+
+# python 3
+- name: python
+  image: jmervine/herokudev-python
+  version: 3.8.2
+  source: jmervine/herokudev-base:heroku18
+  tags:
+  - latest
+  - 3.8
+  - 3
 - name: python
   image: jmervine/herokudev-python
   version: 3.6.5
   source: jmervine/herokudev-base:heroku18
   tags:
-  - latest
   - 3.6
-  - 3
 - name: python
   image: jmervine/herokudev-python
   version: 3.6.3
@@ -165,10 +181,6 @@
 - name: ruby
   image: jmervine/herokudev-ruby
   version: 2.3.6
-  source: jmervine/herokudev-node:lts
-- name: ruby
-  image: jmervine/herokudev-ruby
-  version: 2.3.7
   source: jmervine/herokudev-node:lts
 - name: ruby
   image: jmervine/herokudev-ruby
@@ -219,7 +231,23 @@
   image: jmervine/herokudev-ruby
   version: 2.5.3
   source: jmervine/herokudev-node:lts
+- name: ruby
+  image: jmervine/herokudev-ruby
+  version: 2.5.8
+  source: jmervine/herokudev-node:lts
+  tags:
+  - 2.5
+- name: ruby
+  image: jmervine/herokudev-ruby
+  version: 2.6.6
+  source: jmervine/herokudev-node:lts
+  tags:
+  - 2.6
+- name: ruby
+  image: jmervine/herokudev-ruby
+  version: 2.7.1
+  source: jmervine/herokudev-node:lts
   tags:
   - latest
-  - 2.5
+  - 2.7
   - 2

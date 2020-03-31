@@ -3,8 +3,8 @@
 # This file is dynamically generated, do not edit!
 # See https://github.com/jmervine/imagend for generator details.
 
-from jmervine/herokudev-base:heroku16
-env NODE_VERSION 8.9.0
+from jmervine/herokudev-base:heroku18
+env NODE_VERSION 12.16.1
 env DEBIAN_FRONTEND=noninteractive
 
 

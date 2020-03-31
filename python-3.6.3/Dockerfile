@@ -4,6 +4,7 @@
 # See https://github.com/jmervine/imagend for generator details.
 from jmervine/herokudev-base:heroku16
 env PYTHON_VERSION 3.6.3
+env DEBIAN_FRONTEND=noninteractive
 
 workdir /tmp
 run \

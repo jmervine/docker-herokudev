@@ -4,6 +4,7 @@
 # See https://github.com/jmervine/imagend for generator details.
 from jmervine/herokudev-base:heroku16
 env PYTHON_VERSION 2.7.12
+env DEBIAN_FRONTEND=noninteractive
 
 run \
   (echo ${PYTHON_VERSION} | grep "^3" && \

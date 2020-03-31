@@ -4,7 +4,7 @@
 # See https://github.com/jmervine/imagend for generator details.
 
 from jmervine/herokudev-node:lts
-env RUBY_VERSION 2.5.0
+env RUBY_VERSION 2.6.6
 env RUBY_INSTALL_VERSION 0.6.1
 env DEBIAN_FRONTEND=noninteractive
 

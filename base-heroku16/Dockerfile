@@ -6,6 +6,7 @@
 from heroku/heroku:16
 
 env PHANTOMJS_VERSION 2.1.1
+env DEBIAN_FRONTEND=noninteractive
 
 run \
     apt-get update && \

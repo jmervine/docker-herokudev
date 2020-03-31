@@ -6,6 +6,7 @@
 from jmervine/herokudev-node:lts
 env RUBY_VERSION 2.2.10
 env RUBY_INSTALL_VERSION 0.6.1
+env DEBIAN_FRONTEND=noninteractive
 
 
 workdir /tmp
