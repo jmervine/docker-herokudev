@@ -5,6 +5,8 @@
 
 from {{.Source}}
 env NODE_VERSION {{.Version}}
+env DEBIAN_FRONTEND=noninteractive
+
 {{if not .Native}}
 # install node binary
 # note: including node as a js runtime for ruby applications

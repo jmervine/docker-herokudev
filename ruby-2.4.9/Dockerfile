@@ -3,12 +3,12 @@
 # This file is dynamically generated, do not edit!
 # See https://github.com/jmervine/imagend for generator details.
 
-from {{.Source}}
-env RUBY_VERSION {{.Version}}
+from jmervine/herokudev-node:lts
+env RUBY_VERSION 2.4.9
 env RUBY_INSTALL_VERSION 0.6.1
 env DEBIAN_FRONTEND=noninteractive
 
-{{if not .Native}}
+
 workdir /tmp
 
 run \
@@ -34,7 +34,7 @@ run \
 #     make install && \
 #     cd /tmp && \
 #     rm -rf ruby-${RUBY_VERSION}
-{{end}}
+
 
 run gem install bundler --no-ri --no-rdoc
 run mkdir -p /src

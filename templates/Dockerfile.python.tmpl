@@ -4,6 +4,7 @@
 # See https://github.com/jmervine/imagend for generator details.
 from {{.Source}}
 env PYTHON_VERSION {{.Version}}
+env DEBIAN_FRONTEND=noninteractive
 
 {{ if not .Native -}}
 workdir /tmp
